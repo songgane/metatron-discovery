@@ -3355,6 +3355,8 @@ export class PageComponent extends AbstractPopupComponent implements OnInit, OnD
           } else if (this.chart.uiOption.type === ChartType.LABEL || this.chart.uiOption.type === ChartType.MAPVIEW) {
 
           } else if (this.widgetConfiguration.chart.type.toString() === 'grid') {
+
+            this.chart.chart.resize();
             //(<GridChartComponent>this.chart).grid.arrange();
           } else if (this.chart.uiOption.type === ChartType.NETWORK) {
             this.networkChart.draw();
